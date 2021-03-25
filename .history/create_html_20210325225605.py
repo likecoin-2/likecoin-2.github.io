@@ -1,5 +1,17 @@
 import os
 import pickle
+import argparse
+
+# parse command line argument
+def parse_args():
+    '''
+    Parse the TopoLSTM parameters
+    '''
+    parser = argparse.ArgumentParser(description="Create Html")
+
+    parser.add_argument('--name',default='',type=str,help='name')
+
+    return parser.parse_args()
 
 def load_corpus_name():
     with open('name_corpus.pickle', 'rb') as f:
@@ -9,7 +21,7 @@ def load_corpus_name():
     with open('name_corpus.pickle', 'wb') as f:
         pickle.dump(corpus, f)
     return name
-
+    
 def output_html(number, name):
     html_name_list = []
     for i in range(number):
@@ -40,6 +52,6 @@ def output_linkcoin(number, name):
             f.write('\n')
 
 if __name__ == "__main__":
-    name = load_corpus_name()
-    output_html(84, name)
-    output_linkcoin(84, name)
+    args = parse_args()
+    output_html(84, args.name)
+    output_linkcoin(84, args.name)

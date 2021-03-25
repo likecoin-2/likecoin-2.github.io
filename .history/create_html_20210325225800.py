@@ -40,6 +40,7 @@ def output_linkcoin(number, name):
             f.write('\n')
 
 if __name__ == "__main__":
+    args = parse_args()
     name = load_corpus_name()
     output_html(84, name)
     output_linkcoin(84, name)
