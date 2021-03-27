@@ -11,7 +11,7 @@ def clap_html():
     
     likecoin_login_url = "https://like.co/in/register?language=zh&redirect=https%3A%2F%2Flike.co%2Fin%2Foauth%3Flanguage%3Dzh%26client_id%3D8d494f5f203c8bec57f7%26redirect_uri%3Dhttps%253A%252F%252Fliker.land%252Foauth%252Fredirect%26scope%3Dprofile%2520email%2520read%253Alike%2520civic_liker%2520bookmarks%2520follow%2520preferences%26state%3D396024e16df05025%26register%3D1&register=1"
     username_list = ['championfsd@protonmail.com', 'bgfnggh@protonmail.com']
-    password_list = ['yuig4796', 'yuig4796']
+    password_list = ['yuig4796', 'yuig4796', 'yuig4796']
 
     for username, password in zip(username_list, password_list):
         driver = webdriver.Firefox()
