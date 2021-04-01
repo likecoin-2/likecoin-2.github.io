@@ -27,7 +27,7 @@ def output_html(number, names):
                 f.write(message)
                 f.close()
             
-            html_name_list.append(html_name)
+        html_name_list.append(html_name)
     with open('html.pickle', 'wb') as f:
         pickle.dump(html_name_list, f)
 
